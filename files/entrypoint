@@ -88,7 +88,8 @@ fi
 
 # Replace port with value of PORT0 environment variable in sshd_config
 file_path="/etc/ssh/sshd_config"
-envsubst "PORT0" < "$file_path" > "$file_path".tmp && mv "$file_path".tmp "$file_path"
+log "Replacing \$PORT0 with $PORT0 in $file_path"
+envsubst "\$PORT0" < "$file_path" > "$file_path".tmp && mv "$file_path".tmp "$file_path"
 
 
 if $startSshd; then
