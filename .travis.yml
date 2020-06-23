@@ -7,7 +7,7 @@ services:
 
 install: skip
 
-script: bash ./deploy.sh sartography/cr-connect-frontend
+script: bash ./deploy.sh sartography/sftp
 
 notifications:
   email:
